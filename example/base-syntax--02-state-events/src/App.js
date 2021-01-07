@@ -38,7 +38,7 @@ class App extends Component {
   }
   deletePersonHandler = (personIndex) => {
     console.log('aaaaaa')
-    const persons = this.state.persons;
+    const persons = [...this.state.persons];
     persons.splice(personIndex, 1);
     this.setState({persons: persons});
   }
