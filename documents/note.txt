@@ -1,0 +1,7 @@
++ Key in react: 
+	- in react docs: Keys help React identify which items have changed, are added, or are removed.
+	 Keys should be given to the elements inside the array to give the elements a stable identity.
+	- in udemy: But basically what it does is it has something called a virtual dom where it compares what it would render
+	now if it were to call the render method now or if it did actually adjust the real dom with the result
+	of the render method to the previous dom it rendered. It does this compression of the future with the past basically.
+	Chú ý: (in list) If the list changes, every element will receive a new index at least every element after the change. So index is not a good key.
