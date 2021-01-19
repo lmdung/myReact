@@ -1,1 +1,4 @@
- - Không sử dụng được pseudos selectors( hover các thứ) trong component JS.
+ - Không sử dụng được pseudos selectors( hover các thứ) trong component JS theo mặc định, phải sử dụng thư viện (Radium is a popular package for react which allows us to use inline styles with pseudo selectors and 
+ media queries, so pretty awesome hoặc Styled Components library cực kỳ nhiều ng dùng)
+ 
+ - we don't assign a new value so it's still a constant, but we assign a new value to one of its properties 
