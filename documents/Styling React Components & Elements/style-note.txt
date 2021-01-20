@@ -2,3 +2,10 @@
  media queries, so pretty awesome hoặc Styled Components library cực kỳ nhiều ng dùng)
  
  - we don't assign a new value so it's still a constant, but we assign a new value to one of its properties 
+ 
+ -Create React App không có file build cấu hình vì thế chúng ta không thể cấu hình cho nó. Nếu bạn muốn điều chỉnh một số thứ bạn phải sử dụng đến lệnh “npm run eject” để nó xuất ra cho bạn các file cấu hình để bạn điều chỉnh.
+ 
+  - thêm modules: true, localIdentName: '[name]__[local]__[hash:base64:5]' như ảnh để cài đặt css trong dev.js va prod.js 
+	(Mục đích đóng gói css trong 1 component) - sử dụng nếu dùng version thấp
+	
+-CSS Modules are a relatively new concept (you can dive super-deep into them here: https://github.com/css-modules/css-modules). With CSS modules, you can write normal CSS code and make sure, that it only applies to a given component.
