@@ -1,0 +1,1 @@
+- side effect là những hành động event có thể làm thay đổi DOM trong react components.
