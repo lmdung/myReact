@@ -2,6 +2,8 @@
 
 - shouldComponentUpdate is a powerful tool. Nói theo cách hiểu thì nó chặn hoặc cho phép render lại component theo sự thay đổi của các prop hay state
 Làm cho project được mượt mà hơn (performance- hiệu suất tốt hơn). Trong function component sử dụng memo.
- Lưu ý: nếu tất cả hoặc hầu như parent update khiến component con update thì k nên sử dụng vì you will just execute some extra
-
+ Lưu ý 1: nếu tất cả hoặc hầu như parent update khiến component con update thì k nên sử dụng vì you will just execute some extra
 logic that makes no sense and actually just slows down the application a tiny bit.
+
+ Lưu ý 2: if you are checking all properties, then you can also not use shouldComponentUpdate. Sử dụng pureComponent(is
+	just a normal component that already implements shouldComponentUpdate with a complete props check,). Cả 2 cách đều cho kết quả giống nhau.
