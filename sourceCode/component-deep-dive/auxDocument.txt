@@ -1,0 +1,3 @@
+- trong dive 06 có file aux.js nhưng trên window sẽ không đặt được tên như vậy nên lúc giải nén sẽ mất,
+vì vậy phải add file auxiliary.js vào.
+- Aux có tác dụng tương tự react.fragment
