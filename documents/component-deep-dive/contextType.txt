@@ -1,0 +1,6 @@
+- static contextType = AuthContext;
+this.context...
+tại sao phải sử dụng contextType? Bởi vì nếu chỉ sử dụng AuthContext.Consumer thì nó chỉ truy cập được context trong Render...
+Ví dụ là k thể truy cập context ở trong componentDitMount để làm điều gì đó
+
+Trong func Component thì sử dụng useContext
