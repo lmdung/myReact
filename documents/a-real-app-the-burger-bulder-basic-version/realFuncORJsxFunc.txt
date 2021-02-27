@@ -1,0 +1,2 @@
+giữa const a = () => () và a = () => { return () } khác gì nhau. và lúc nào sử dụng.
+Sử dụng real function khi mà trước khi muốn trả về JSX thì bạn muốn xử lý cái gì đó trước.
