@@ -9,6 +9,7 @@ import './Blog.css';
 class Blog extends Component {
     state = {
         posts: [],
+        selectPostId: null,
     }
     componentDidMount() {
         axios.get('https://jsonplaceholder.typicode.com/posts')
@@ -24,17 +25,25 @@ class Blog extends Component {
                 this.setState({ posts: updatePosts})
             })
     }
+
+    postSelectedHandler = (id) => {
+        this.setState({selectPostId: id})
+    }
     render () {
-        const ports = this.state.posts.map(port => {
-            return <Post key={port.id} title={port.title} author={port.author}/>
+        const posts = this.state.posts.map(post => {
+            return <Post 
+                key={post.id} 
+                title={post.title} 
+                author={post.author}
+                clicked={() => this.postSelectedHandler(post.id)}/>
         })
         return (
             <div>
                 <section className="Posts">
-                    {ports}
+                    {posts}
                 </section>
                 <section>
-                    <FullPost />
+                    <FullPost id={this.state.selectPostId}/>
                 </section>
                 <section>
                     <NewPost />
