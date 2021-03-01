@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import Aux from '../../hoc/Auxiliary'
+import Aux from '../../hoc/Auxiliary/Auxiliary'
 
 import Burger from '../../components/Burger/Burger';
 import BuildControls from '../../components/Burger/BuildControls/BuildControls'
@@ -87,8 +87,9 @@ class BurgerBuilder extends Component {
     }
     // console.log(disabledInfor)
     return (
+      // use shouldComponentUpdate in Modal to update the OrderSummary because OrderSummary wrapped by Modal
       <Aux>
-        <Modal show={this.state.purchasing} modalClosed={this.purchaseCancelHandler}>
+        <Modal show={this.state.purchasing} modalClosed={this.purchaseCancelHandler}> 
           <OrderSummary 
           ingredients={this.state.ingredients}
           purchaseCancelled={this.purchaseCancelHandler}

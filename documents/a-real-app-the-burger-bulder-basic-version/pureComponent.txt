@@ -1,0 +1,1 @@
+ pure component sẽ kiểm tra nhiều thứ và có những thứ không cần thiết.
