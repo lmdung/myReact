@@ -7,7 +7,10 @@ class Modal extends Component {
 
   shouldComponentUpdate(nextProps, nextState) {
     // only update when show modal
-    return nextProps.show !== this.props.show;
+    // return nextProps.show !== this.props.show;
+    
+    // update when change show and children
+    return nextProps.show !== this.props.show || nextProps.children !== this.props.children;
   }
   render() {
     return (
