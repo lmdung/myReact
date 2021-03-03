@@ -1,0 +1,4 @@
+match, location, history prop không truyền theo tree, nó chỉ truyền xuống component được render, những component con thì không
+Có 2 cách để truyền xuống component con:
+ 1. truyền props xuống
+ 2. sử dụng withRoute (là higher order component, dùng wrapping component)- information for the nearest loaded route.
