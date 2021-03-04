@@ -1,0 +1,4 @@
+Lazy loading is a design pattern for optimizing web and mobile apps. 
+The concept of lazy loading is simple: initialize objects that are critical to the user interface first and quietly render noncritical items later.
+
+https://blog.logrocket.com/lazy-loading-components-in-react-16-6-6cea535c0b52/

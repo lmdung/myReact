@@ -1,14 +1,20 @@
 import React, { Component } from 'react';
-import { Route, NavLink, Switch } from 'react-router-dom'
+import { Route, NavLink, Switch, Redirect } from 'react-router-dom'
 // import axios from 'axios';
 // import axios from '../../axios';
 import './Blog.css';
 import Posts from './Posts/Posts';
-import NewPost from './NewPost/NewPost';
-import FullPost from './FullPost/FullPost';
+// import NewPost from './NewPost/NewPost';
+// import FullPost from './FullPost/FullPost';
+import asyncComponent from '../../hoc/asyncComponent';
 
+const AsyncNewPost = asyncComponent (() => {
+    return import('./NewPost/NewPost')
+})
 class Blog extends Component {
-    
+    state = {
+        auth: true,
+    }
     render () {
         return (
             <div>
@@ -16,7 +22,7 @@ class Blog extends Component {
                     <nav>
                         <ul>
                             <li><NavLink 
-                                to="/"
+                                to="/posts"
                                 exact
                                 activeClassName="my-active"
                                 activeStyle={{
@@ -44,8 +50,12 @@ class Blog extends Component {
                 <Switch>
                     {/* <Route path="/:id" component={FullPost} /> */}
                     {/* Không đặt id trước new-post vì nó sẽ cho rằng new-post là id và get data sẽ fail */}
-                    <Route path="/new-post" component={NewPost} />
-                    <Route path="/:id" component={FullPost} />
+                    {this.state.auth ? <Route path="/new-post" component={AsyncNewPost} /> : null}
+                    <Route path="/posts" component={Posts} />
+                    {/* <Route path="/:id" component={FullPost} /> */}
+                    {/* <Redirect from="/" to="/posts" /> */}
+                    <Route render = {() => <h1>NOT FOUND</h1>} />
+                    {/* route không đường dẫn là cách bắt lỗi 404-k tìm thấy đường dẫn */}
                 </Switch>
 
             </div>

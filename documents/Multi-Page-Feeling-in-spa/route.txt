@@ -1,0 +1,1 @@
+You can use the route component where ever you want in your application is wrapped by BrowserRoute
