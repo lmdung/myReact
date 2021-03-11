@@ -1,0 +1,4 @@
+-State Can Be Complex
+
+- Định nghĩa thành phần trong file pdf:
+	- Center store: this store stores the entire application state (lưu trữ toàn bộ trạng thái của ứng dụng )
