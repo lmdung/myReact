@@ -1,0 +1,1 @@
+- chỉ nhận Actions must be plain objects

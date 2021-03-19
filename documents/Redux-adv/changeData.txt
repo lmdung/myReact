@@ -1,0 +1,1 @@
+- ở actionCreator hay reducer đều đưuọc. Ở action  thì chạy được async còn reducer chỉ chạy được sync. Recomment reducer

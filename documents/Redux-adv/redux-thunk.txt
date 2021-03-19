@@ -1,0 +1,7 @@
+- 1 middleware
+-  nó đóng vai trò là một Middleware được đặt trước thời điểm reducer nhận request để nhận biết các action có trả về một PJO (plain Javascript object) hay không, nếu đó là một PJO, Thunk sẽ chuyển action đó đến Reducer như thường lệ, nếu action trả về là một function, \
+Redux Thunk sẽ "chặn" action đó lại và đợi cho đến khi một lệnh asynchronous nào đó trong function hoàn tất và trả về kết quả
+
+Kết luận:
+.	Redux Thunk là một Middleware cho phép bạn viết các Action trả về một function thay vì một plain javascript object bằng cách trì hoãn việc đưa action đến reducer.
+.	Redux Thunk được sử dụng để xử lý các logic bất đồng bộ phức tạp cần truy cập đến Store hoặc đơn giản là việc lấy dữ liệu như Ajax request.
